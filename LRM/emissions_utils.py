@@ -69,7 +69,7 @@ def llm_understand_query(query):
 
     ### 🚀 Output Format (No Extra Text!) 🚀 ###
     - **Start the response with the identifier:**  
-    aasba leha:
+    UUU_:
 
    
     - **Then immediately follow with the function call:**  
@@ -80,22 +80,22 @@ def llm_understand_query(query):
     ### 🔥 Example Outputs (Do NOT Copy! Always Extract the Date!) 🔥
     ✅ **Query:** `"What were the emissions on July 17 2019?"`  
     🔹 **Correct Response:**  
-    aasba leha: get_emissions_by_date("2019-07-17")
+    UUU_: get_emissions_by_date("2019-07-17")
 
     ✅ **Query:** `"Compare Refining of mineral oil and Production of Pig iron or steel on March 5, 2021."`  
     🔹 **Correct Response:**  
-    aasba leha: compare_industries("Refining of mineral oil", "Production of Pig iron or steel", "2021-03-05")
+    UUU_: compare_industries("Refining of mineral oil", "Production of Pig iron or steel", "2021-03-05")
 
 
     ✅ **Query:** `"Give me the carbon emissions information for Hydrogen production."`  
     🔹 **Correct Response:**  
-    aasba leha: get_industry_emissions("Production of Hydrogen and synthesis gas", None)
+    UUU_: get_industry_emissions("Production of Hydrogen and synthesis gas", None)
 
    
 
     ✅ **Query:** `"Show the trend of Cement production emissions."`  
     🔹 **Correct Response:**  
-    aasba leha: plot_trend("Production of cement clinker")
+    UUU_: plot_trend("Production of cement clinker")
 
     ### **User Query:**
     "{query}"
@@ -167,13 +167,13 @@ def execute_query(query):
 
 def extract_function_call(response: str) -> str:
    
-    identifier = "aasba leha:"
+    identifier = "UUU_:"
 
     # Find the position of the identifier
     index = response.find(identifier)
 
     if index == -1:
-        return "Error: Identifier 'aasba leha:' not found in response."
+        return "Error: Identifier 'UUU_:' not found in response."
 
     # Extract everything after the identifier
     function_call = response[index + len(identifier):].strip()
